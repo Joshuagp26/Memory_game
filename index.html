@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MEMORIA</title>
+</head>
+<body>
+    <section  class="contenedorPrincial">
+        <section class="textos">
+            <h1>Juego de memoria</h1>
+            <p>Este es un juego simple de memoria. 
+                La forma de jugar es seguir la secuencia en el mismo orden, a medida que juegas el juego te exige más concentración 
+                Estas listo para este reto?
+            </p>
+            <p>
+                Atento a la secuencia
+            </p>
+            <button onclick="iniciar()" class="iniciar">INICIAR</button>
+            <button onclick="siguiente()" class="iniciar siguiente">SIGUIENTE</button>
+
+        </section>
+    
+        <section class="contenedorJuego">
+            <div onclick="cc1()" class="c1 cuadro"></div>
+            <div onclick="cc2()" class="c2 cuadro"></div>
+            <div onclick="cc3()" class="c3 cuadro"></div>
+            <div onclick="cc4()" class="c4 cuadro"></div>
+            <div onclick="cc5()" class="c5 cuadro"></div>
+            <div onclick="cc6()" class="c6 cuadro"></div>
+        </section>
+</section>
+<section class="puntaje">
+    <p>Puntos Totales :</p>
+    <p class="puntajes">0</p>
+</section>
+</body>
+<script src="code.js"></script>
+</html>

@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    font-family: "Holtwood One SC", serif;;
+}
+.contenedorPrincial{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 7% 15% 0 15%;
+   
+}
+.textos{ 
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 750px;
+    background-color:  #272727;
+    border-radius: 24px;
+    color: aliceblue;
+    padding: 10px;
+}
+p{
+    margin-top: 50px;
+}
+.iniciar{
+    width: 50%;
+    height: 50px;
+}
+.contenedorJuego{
+    display: flex;
+    background-color: #B2BEBF;
+    max-width: 800px;
+    min-width: 500px;
+    height: 600px;
+    height: 50%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 24px;
+      
+}
+.cuadro{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 200px;
+    box-sizing: border-box;
+}
+.cuadro:active{
+    background-color: aliceblue;
+}
+.puntaje{
+    display: flex;
+    gap: 10px;
+    align-content: center;
+    margin: 10px 15% 0 15% ;
+}
+.c1{
+    border-radius: 50px;
+    background-color: #dd0a1c;
+}
+.c2{
+    border-radius: 50px;
+    background-color: #001aff;
+}
+.c3{
+    border-radius: 50px;
+    background-color: #08c718;
+}
+.c4{
+    border-radius: 50px;
+    background-color: #eed708;
+}
+.c5{
+    border-radius: 50px;
+    background-color: #F27329;
+}
+.c6{
+    border-radius: 50px;
+    background-color: #b21ddb;
+}
