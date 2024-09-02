@@ -104,3 +104,36 @@ p{
         min-width: 520px;
     }
 }
+@media (max-width : 500px) {
+
+    .contenedorPrincial{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;       
+    }
+
+    .textos{ 
+        margin: 5px 10px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 90%;
+        min-width: 20px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    .contenedorJuego{
+        max-width: 400px;
+        min-width: 320px;
+    }
+    .cuadro{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 200px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
