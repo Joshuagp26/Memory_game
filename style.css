@@ -80,3 +80,27 @@ p{
     border-radius: 50px;
     background-color: #b21ddb;
 }
+@media (max-width : 1000px) {
+
+    .contenedorPrincial{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;       
+    }
+
+    .textos{ 
+        margin: 5px 10px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 90%;
+        min-width: 500px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    .contenedorJuego{
+        max-width: 800px;
+        min-width: 520px;
+    }
+}

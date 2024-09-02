@@ -12,17 +12,17 @@ let numeroAzar = 0;
 let clicksuma = 0;
 let numeros = [];
 let comparar= [];
+let puntos = 0;
 bsiguiente.style.display = "none";
-let nivel = 0
 //se inicializa en 0 el valor del array index
 let currentIndex = 0;
 function iniciar() {
     agregarNivel();
-    console.log("INICIAR");
     bIniciar.style.display = "none";
     bsiguiente.style.display = "block";
 }
 function reinicio(){
+    puntos = 0;
     numeroAzar = 0;
     clicksuma = 0;
     numeros = [];
@@ -35,34 +35,22 @@ function reinicio(){
 function colores(numeroAzar){
     switch (numeroAzar) {
         case 1:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;
         case 2:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;
         case 3:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;
         case 4:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;
         case 5:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;
         case 6:
-            console.log("entrada");
             setTimeout(cambioColor,300,numeroAzar);
-            console.log("cambio uno")
         break;    
     }
 }
@@ -95,7 +83,6 @@ function cambioColor(numeroAzar){
             break;
     
         default:
-            console.log("CAMBIONEGRODefault")
             break;
                     break;   }
 }
@@ -125,32 +112,26 @@ function cambioColor2(numeroAzar){
 
 function cc1 (click){
     click = 1 ;
-    console.log(click);
     comparacion(click);
 }
 function cc2 (click){
     click = 2 ;
-    console.log(click);
     comparacion(click);
 }
 function cc3 (click){
     click = 3 ;
-    console.log(click);
     comparacion(click);
 }
 function cc4 (click){
     click = 4 ;
-    console.log(click);
     comparacion(click);
 }
 function cc5 (click){
     click = 5 ;
-    console.log(click);
     comparacion(click);
 }
 function cc6 (click){
     click = 6 ;
-    console.log(click);
     comparacion(click);
 }
 
@@ -158,8 +139,8 @@ function cc6 (click){
 function comparacion(click){
     nuevo = comparar.push(click);
     clicksuma = clicksuma ++;
-    console.log("matriz COMposicion 0 = "+comparar[0]);
-    console.log("matriz COMposicion 1 = "+comparar[1]);
+    puntos = puntos + 10 ;
+    puntajes.textContent =puntos;
 }
 
 //verificar igualdad del array  
@@ -167,17 +148,14 @@ function siguiente(){
     let v=0; 
     //verificar el mismo largo de array
     v=v+1;
-    console.log("pRRRrimerV"+v);
     if (numeros.length === comparar.length){
         v=v+1;
-        console.log("SEGUNDO"+v);
         //ciclo para verificar datos
         for(i = 0; i<numeros.length; i++){
-            console.log("loop---------");
             //si encuentra una diferencia en los datos reinicia
             if(numeros[i] !== comparar[i]){
                 v=v+1;
-                console.log("TERCER"+v);
+                alert("LOSE, PUNTOS TOTALES SON = "+puntos);
                 reinicio();
             } 
         }
@@ -185,6 +163,7 @@ function siguiente(){
              agregarNivel();
         }
     }else{
+        alert("LOSE, PUNTOS TOTALES SON = "+puntos);
         reinicio();
     }
    
@@ -203,7 +182,6 @@ function agregarNivel(){
 
         // Función para mostrar el valor
         function vervalor(value) {
-            console.log('Valor mostrado:', value);
             //llamda a combio de colores
             colores(value);
         }
@@ -223,7 +201,6 @@ function agregarNivel(){
             } else {
                 // Detener el intervalo cuando se hayan procesado todos los elementos
                 clearInterval(intervalId);
-                console.log('Todos los elementos han sido mostrados.');
                 currentIndex=0;
             }
         }, interval);
